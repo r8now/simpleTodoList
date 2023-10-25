@@ -11,9 +11,12 @@ form.addEventListener("submit", (e) => {
 });
 
 function addItem() {
+  
   let name = nameEl.value;
 
-
+if(name ==""){
+  return;
+}
 
   arr.push(name);
   list.innerHTML = "";
