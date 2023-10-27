@@ -1,8 +1,10 @@
 const nameEl = document.getElementById("name");
 const btnEl = document.getElementById("btn");
+const deleteBtnEl = document.getElementById("delete-btn");
 const list = document.getElementById("list");
 
 let arr = [];
+deleteBtnEl.addEventListener("click",deleteAll)
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -29,6 +31,14 @@ if(name ==""){
 
 nameEl.value="";
 }
+
+function deleteAll(){
+  
+  arr = [];
+  list.innerHTML=arr;
+}
+
+
 
 function remove(e) {
  
