@@ -78,12 +78,5 @@ function remove(e) {
   list.innerHTML = "";
 
   // Rebuild the list with the updated array
-  arr.map((item, index) => {
-    list.innerHTML += `
-            <li id="${index}">
-                ${item}
-                <button id="${index}" onclick="remove(${index})">Delete</button>
-            </li>
-        `;
-  });
+ outPutList();
 }
