@@ -24,14 +24,13 @@ function addItem() {
   if (name === "") {
     return;
   }
- arr.push(name);
- list.innerHTML = "";
- outPutList();
+  arr.push(name);
+  list.innerHTML = "";
+  outPutList();
 
   nameEl.value = "";
 }
-function outPutList(){
- 
+function outPutList() {
   console.log(arr);
   arr.map((item, index) => {
     list.innerHTML += `<li id="${index}">${item}  <button id="${index}" onclick="remove(${index})">delete</button>
@@ -41,10 +40,9 @@ function outPutList(){
 
 // Add the update function:
 function update(id) {
-  if(nameEl.value == ""){
+  if (nameEl.value == "") {
     return;
   }
-  
 
   // Get the current value of the input field
   let updatedName = nameEl.value;
@@ -53,7 +51,7 @@ function update(id) {
   arr[id] = updatedName;
 
   // Clear the list
- list.innerHTML = "";
+  list.innerHTML = "";
 
   // Rebuild the list with the updated array
   outPutList();
@@ -78,5 +76,5 @@ function remove(e) {
   list.innerHTML = "";
 
   // Rebuild the list with the updated array
- outPutList();
+  outPutList();
 }
